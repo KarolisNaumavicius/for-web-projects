@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>naujosuzd</title>
+</head>
+
+<body>
+
+    <script>
+
+        // Pirma uzduotis 
+
+        for (let i = 7; i <= 31; i++) {
+            if (i % 2 != 0)
+                document.write(`<p>${i}</p>`)
+        }
+
+
+        // Antra uzduotis
+
+        let a = 1;
+
+        let eilute = ``;
+
+
+
+        while (a <= 10) {
+            eilute = eilute + a + ` `
+            document.write(eilute + `</br>`);
+            a++;
+        }
+
+        // Jums duotas stringas: “Žalgiris, Anadolu Efes, Barcelona BC”.
+        //  Pasinaudodami ciklų pagalba iš stringo ištraukite vieną atsitiktinį komandos pavadinimą. 
+        //  Rezultate kablelių ir tarpų neturi būti. 
+
+        function rand(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        let komandos = `Žalgiris, Anadolu Efes, Barcelona BC`;
+        let bufferis = ``;
+
+        for (let i = 0; i < komandos.length; i++) {
+            if (komandos[i] === ",") {
+                if (rand(0, 1) === 0) {
+                    break;
+                } else {
+                    bufferis = ``;
+                    i++;
+                }
+
+            } else {
+                bufferis = bufferis + komandos[i]
+            }
+
+        }
+
+        document.write(bufferis + `</br>`);
+
+        // Jums duotas stringas: “54 77 2 59 17 19 108”.
+        //  Paimkite jame esančius skaičius ir patikrinkite juos ar jie yra pirminiai.
+        //     T.y.ar natūralusis skaičius yra didesnis nei 1 ir be liekanos dalinasi tik iš savęs ir iš vieneto.
+        //         https://en.wikipedia.org/wiki/Prime_number 
+
+        let skaiciai = `54 77 2 59 17 19 108`;
+        bufferis = ``;
+
+
+        for (let i = 0; i <= skaiciai.length; i++) {
+            let arPirminis = true
+            if (skaiciai[i] === ` ` || skaiciai.length == i) {
+                console.log(bufferis);
+                let skaicius = parseInt(bufferis)
+                if (skaicius > 1) {
+                    for (let y = 2; y < skaicius; y++) {
+                        if (skaicius % y === 0) {
+                            // console.log(skaicius + " % " + y)
+                            document.write(`Skaicius ${bufferis} nera pirminis `)
+                            arPirminis = false;
+                            bufferis = "";
+                            break;
+                        }
+                    }
+                    if (arPirminis == true) {
+                        document.write(`Skaicius ${bufferis} pirminis `);
+                        bufferis = "";
+                    }
+                }
+            } else {
+                bufferis = bufferis + skaiciai[i]
+
+            }
+
+        }
+
+        // document.write(bufferis)
+
+
+// Jūs gavote užšifruotą žinutę:
+//  “gjrgkjxvbsigdvifpjqyzlzxsxzjnvgojlziaofdfnufymsjqsxxyknqcchmpepoljekhydgmfvhwipvopllndyuddcgxnleutsmprxqlcnxxthdhtpnutqocvtuanouumbkmlxexzmc”
+// Surasti tai, kas joje yra paslėpta jums padės varlė. Ji tupi ežero krante, o kiekvieną raidė yra akmuo. 
+// Varlytė vienu šuoliu geba peršokti septynis akmenis.
+//  Su kiekvienu šuoliu priartėsite prie tikslo.
+// Kas buvo paslėpta? 
+
+let zodziuKratinys = `gjrgkjxvbsigdvifpjqyzlzxsxzjnvgojlziaofdfnufymsjqsxxyknqcchmpepoljekhydgmfvhwipvopllndyuddcgxnleutsmprxqlcnxxthdhtpnutqocvtuanouumbkmlxexzmc`;
+
+
+for(let i = 0; i < zodziuKratinys.length; i+= 7) {
+    if(i > 0) {
+        document.write(`${zodziuKratinys[i]}`);
+    }
+} 
+
+    </script>
+
+</body>
+
+</html>

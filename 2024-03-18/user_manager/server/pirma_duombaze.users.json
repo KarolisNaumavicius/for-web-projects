@@ -1,0 +1,27 @@
+[{
+  "_id": {
+    "$oid": "6705364b33036dd498f72764"
+  },
+  "name": "Kar",
+  "last_name": "Nao",
+  "email": "karno@gmail.com",
+  "password": "1234"
+},
+{
+  "_id": {
+    "$oid": "670537a133036dd498f72765"
+  },
+  "name": "Las",
+  "password": "123456",
+  "email": "lasve@gamail.com",
+  "last_name": "Ventura"
+},
+{
+  "_id": {
+    "$oid": "670538aa33036dd498f72768"
+  },
+  "name": "Reikjavikas",
+  "last_name": "Bankura",
+  "password": "1234564",
+  "email": "reikjavikbankr@gamail.com"
+}]

@@ -1,0 +1,35 @@
+.card {
+    background-color: #f6f6f7;
+    width: 300px;
+    padding-left: 20px;
+    padding-top: 5px;
+    border-radius: 15px;
+    text-align: left;
+    height: 205px;
+
+
+   
+}
+
+.card img {
+
+background-color: #ebebef;
+border-width: 50px;
+border: 6px solid #ebebef;
+margin-top: 20px;
+border-radius: 6px;
+
+
+}
+
+.card h3 {
+    height: 20px;
+   
+}
+
+.card h4 {
+ color:#3c3c43bc;
+}
+
+
+

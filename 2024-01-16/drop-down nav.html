@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>drop-down nav</title>
+</head>
+
+<style>
+    * {
+
+        box-sizing: border-box;
+
+    }
+
+    body {
+        margin: 0;
+        font-family: Rubik;
+    }
+
+    .container {
+        max-width: 786px;
+        margin: 0 auto;
+    }
+
+    nav {
+        background-color: white;
+
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+        display: block;
+        padding: 15px 20px;
+        transition: all 0.5s ease-in-out;
+    }
+
+    a:hover {
+        background-color: black;
+        color: white;
+    }
+
+    li {
+        position: relative;
+    }
+
+    li ul {
+        display: none;
+    }
+
+    li:hover ul {
+        display: block;
+        position: absolute;
+        background-color: white;
+        top: 50px;
+        left: 0;
+        width: 300px;
+    }
+
+    li ul a {
+        padding: 5px 20px;
+    }
+    li ul a:hover {
+        background-color: white;
+        color: black;
+        text-decoration: underline;
+    }
+
+    /*Salia esancio elemento parinkimas*/
+    a:hover + ul {
+
+    }
+</style>
+
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">DRABA</a>
+                    <ul>
+                <li><a href="#">drabuziai</a>
+                <li><a href="#">Dzinsai</a></li>
+                <li><a href="#">kelnes</a></li>
+                <li><a href="#">briyki</a></li>
+                <li><a href="#">kelnes</a></li>
+                <li><a href="#">sriukes</a></li>
+                </ul> <ul>
+                        <li><a href="#">Dzinsai</a></li>
+                        <li><a href="#">kelnes</a></li>
+                        <li><a href="#">briyki</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">drabuziai</a></li>
+                <li><a href="#">drabuziai</a></li>
+                <li><a href="#">drabuziai</a></li>
+            </ul>
+        </nav>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit nam exercitationem iste fugiat voluptatibus error corporis soluta harum. Eos adipisci esse quo mollitia dignissimos? Aut ex voluptates ad hic voluptas.
+    </div>
+</body>
+
+</html>

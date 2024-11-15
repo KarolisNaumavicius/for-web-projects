@@ -1,0 +1,13 @@
+{
+  "name": "task-prisijungimas",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}

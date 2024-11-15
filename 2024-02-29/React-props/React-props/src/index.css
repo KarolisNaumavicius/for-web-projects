@@ -1,0 +1,86 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  align-items: center;
+  text-align: center;
+  display:flex;
+  
+  color-scheme: light dark;
+  color: black;
+  background-color: white;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  align-items: center;
+  text-align: center;
+  display:flex;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  text-align: left;
+  margin-right: 600px;
+  height: 20px;
+
+}
+
+.paragraph-two {
+  height: 100px;
+}
+
+.vite-word {  
+  background-image: linear-gradient(to left top,
+  rgb(164, 7, 249) 0%,
+  rgb(150, 10, 240) 40%,
+  rgba(56, 241, 238, 0.567) 100%);
+  /* background-clip: text; */
+  color: transparent;
+  background-clip: text;
+  height: 48px;
+  text-shadow: none;  
+  border: none;
+  margin-bottom: -20px;
+}
+
+.paragraph h3 {
+  text-align: left;
+  height: 12px;
+  color: #3c3c438f;
+  
+
+
+  
+}
+
+.app-css {
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  margin-left: 220px;
+  margin-top: 50px;
+  position: relative;
+  
+}

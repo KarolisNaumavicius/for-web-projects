@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task2</title>
+    <style>
+        .box {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+        
+        .block {
+            padding: 20px; /* Adjust the padding as per your requirement */
+            margin-right: 10px; /* Adds distance between each block */
+            font-size: 24px; /* Set the desired font size */
+           
+        }
+
+        .border {
+            background-color: lightgrey;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black ;
+            width: 50%;
+            position: fixed;
+            top: 0;
+            z-index: 9999;
+
+        }
+    
+        table {
+        position: fixed;
+        top: 0;
+        left: 0;
+        border: 1px solid black;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    </style>
+</head>
+<body>
+    <div class="border">
+    <div class="box">
+        <div class="block">Product</div>
+        <div class="block">Price</div>
+        <div class="block">Quantity</div>
+        <div class="block">Total</div>
+    </div>
+</div>
+</body>
+</html>
+

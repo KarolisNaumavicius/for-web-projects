@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .button {
+            background-color: black;
+            color: white;
+            display: block;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            /* 1x = 1000ms */
+            /* puse sekundes 0.5s arba 500ms */
+            /* Pirmoji reiksme: savybe kuria norime animuoti
+Antroji: animacijos trukme
+Trecioji: animacijos tipas */
+            transition: background-color 1000ms ease-in-out;
+        }
+
+        .button:hover {
+            background-color: red;
+        }
+
+        .container {
+            max-width: 768px;
+            margin: 0 auto;
+         
+        }
+
+.box {
+    width: 300px;
+    height: 300px;
+    margin: 0;
+    /*Norint nurodyti animacija visoms besikeiciancioms savybems*/
+  /*Norint nurodyti animacija kelioms savybems su skirtingais parametrais*/
+    transition:  background-color 500ms ease-in-out,
+    width 1s ease-in-out,
+    height 2s ease-in-out,
+    color 5s ease;
+    /*transition:  all 500ms ease-in-out;*/
+}
+
+.box:hover {
+    background-color: darkred;
+    width: 500px;
+    height: 500px;
+    color: white;
+}
+
+.orange {
+    background-color: orange;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="#" class="button">uzvesk pele</a>
+        <div class="box orange">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, blanditiis?</div>
+    </div>
+</body>
+
+</html>

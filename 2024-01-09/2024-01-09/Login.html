@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="preconnect" href="https://fonts.google.com/specimen/Poppins">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            background-color: rgb(252, 71, 131);
+        }
+
+        .container {
+            display: flex;
+            width: 600px;
+            height: 700px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 40px auto 10px;
+            padding-top: 30px;
+            background-color: white;
+        }
+
+        .loginsignup a {
+            display: inline-flex;
+            height: 65px;
+            width: 198px;
+            justify-content: center;
+            align-items: center;         
+        }
+
+
+        .login {
+            background-color: rgb(252, 71, 131);
+            color: white;
+            display: flex;
+            overflow: hidden;
+            margin-right: -5px;
+        }
+
+        .signup {
+            text-decoration: none;
+            color: solid black;
+            align-items: center;
+        }
+
+        input {
+            padding: 10px;
+            height: 65px;
+            width: 400px;
+            margin-top: 30px;
+            margin-bottom: 0px;
+            border: 2px solid rgba(128, 128, 128, 0.339);
+            border-bottom-width: 4px;
+        }
+
+        button {
+            margin-top: 40px;
+            margin-bottom: 40px;
+            height: 65px;
+            width: 400px;
+            color: white;
+            background-color: rgb(252, 71, 131);
+
+        }
+
+        .login1 {
+            background-color: rgb(252, 71, 131);
+            width: 350px;
+            color: white;
+        }
+
+        input::placeholder {
+            color: rgba(128, 128, 128, 0.773);
+            opacity: 1; 
+            font-size: 18px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div style="margin-bottom: 40px;">
+            <h1>Login Form</h1>
+        </div>
+
+        <div class="loginsignup" style="color: black; font-size: 18px; border: 2px solid rgba(128, 128, 128, 0.339)">
+            <a class="login" style="color: white; font-size: 18px;" >Login</a>
+            <a href="#" class="signup" style="color: black; font-size: 18px;">Signup</a>
+        </div>
+
+        <div>
+            <input type="text" placeholder="Email Address" style="font-size: 18px;">
+        </div>
+
+        <div>
+            <input type="Password" style="padding-bottom: 10px; font-size: 18px;" placeholder="Password">
+        </div>
+
+        <div>
+            <p class="forgetpassword" style=" color: rgb(252, 71, 131); margin-right: 250px; display: flex; margin-top: 15px;  font-size: 18px;">Forgot password?</p>
+        </div>
+
+        <div>
+            <button style="border: none; font-size: 18px">Login</button>
+        </div>
+
+        <div>
+            Not a member? <a href="#"  style="color: rgb(252, 71, 131);">Signup now</a>
+        </div>
+    </div>
+</body>
+
+</html>

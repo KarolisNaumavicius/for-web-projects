@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tasks</title>
+</head>
+<body>
+    <script>
+
+// 3 ir 1
+
+
+let skaicius = 4;
+let laipsnis = 5;
+let rezultatas = Math.pow(skaicius, laipsnis);
+console.log(rezultatas);
+
+
+// 1
+let masyvas = [];
+
+console.log(masyvas);
+document.writeln(masyvas);
+
+
+for(let i = 0; i < 20; i++) {
+    masyvas.push(i)
+}
+
+console.log(masyvas);
+document.writeln(masyvas);
+
+// 2 
+
+let antrasMasyvas = [0, 1, 2];
+
+for(let i = 0; i <= 17; i++) {
+    antrasMasyvas.push(i)
+}
+
+console.log(antrasMasyvas);
+
+document.writeln(`<p>${antrasMasyvas}</p>`);
+
+// 3
+
+masyvas.forEach(function(elementas, indeksas) {
+    masyvas[indeksas] = elementas * 3;
+});
+
+console.log(masyvas);
+document.writeln(masyvas);
+
+// 4 
+
+// 3) Skaičiaus kelimas laipsniu. Pasirenkam skaičiu -> pvz 4 ir pakeliam
+// ji 5oju laipsniu. Pabandykite tai atlikti naudojant "for" / "while"
+// cikla.
+
+let keliamasLaipsniu = 1;
+let kodel = 4;
+
+for(let i = 1; i <=5; i++) {
+    keliamasLaipsniu *= kodel;
+    console.log(keliamasLaipsniu);
+}
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

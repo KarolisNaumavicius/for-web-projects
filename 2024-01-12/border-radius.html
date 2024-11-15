@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border radius</title>
+</head>
+<style>
+    .box{
+        width: 250px;
+        height: 250px;
+
+    }
+
+    .purple {
+        background-color: purple;
+    }
+
+    
+    .orange {
+        background-color: orange;
+    }
+
+    .radius {
+        /* uzlenkimas visiems keturiems kampams */
+          /* border-radius: 20px; */
+        border-radius: 20px 50px 30px 100px;
+
+    }
+
+    .overflow {
+        overflow: hidden;
+    }
+
+    .content {
+        padding: 50px;
+    }
+
+    .yellow {
+        background-color: yellow;
+    }
+
+    .circle {
+border-radius: 50%;
+    }
+
+</style>
+<body>
+
+    <div class="box purple radius"></div>
+    <div class="box orange radius overflow content">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, iste.
+</div>
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, modi.
+
+<div class="box yellow circle"></div>
+</body>
+</html>

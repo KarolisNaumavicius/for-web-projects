@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+
+
+function rand(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+
+// 1.	Sugeneruokite masyvą iš 10 elementų, kurio elementai būtų masyvai iš 5 elementų su reikšmėmis nuo 5 iki 25.
+
+
+
+const array = [];
+
+for (let pirmas = 0; pirmas < 10; pirmas++) {
+    array[pirmas] = [];
+    for (let antras = 0; antras < 10; antras++) {
+        array[pirmas][antras] = rand(5, 25);
+
+    }
+}
+
+
+     const pirmasMasyvas = [];
+
+     for(let pirmasStulpelis = 0; pirmasStulpelis < 10; pirmasStulpelis++) {
+        antrasMasyvas = [];
+      for(let antrasStulpelis=0; antrasStulpelis < 5; antrasStulpelis++) {
+        let skaiciai = Math.floor(Math.random()*(25 - 5 + 1)) +5;
+        antrasMasyvas.push(skaiciai)
+     }
+     pirmasMasyvas.push(antrasMasyvas)
+    }
+console.log(pirmasMasyvas);
+document.write(pirmasMasyvas);
+
+
+function rand(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+
+const arraya = [];
+
+for(let i = 0; i < 10; i++) {
+    subArray = []; 
+for(let j = 0; j < 5; j++) {
+let numbersToArray = rand(5, 25);
+ subArray.push(numbersToArray);
+} 
+ arraya.push(subArray);
+ }
+
+console.log(`Kitas variantas: ${subArray}`);
+document.write(`Kitas variantas: ${subArray}`);
+
+// const arraya = Array.from({length: 10}, () => Array.from({length: 5}, () => Math.floor(Math.random() * 21) + 5));
+
+
+
+    </script>
+</body>
+</html>

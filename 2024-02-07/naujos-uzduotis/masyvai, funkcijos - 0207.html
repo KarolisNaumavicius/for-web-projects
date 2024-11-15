@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masyvai,funkcijos-0207</title>
+</head>
+
+<body>
+    <script>
+
+        // 1.	Sugeneruokite masyvą iš 30 elementų (indeksai nuo 0 iki 29), kurių reikšmės yra atsitiktiniai skaičiai nuo 5 iki 25.
+
+        function rand(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+
+        const array = [];
+
+        for (let i = 0; i < 30; i++) {
+            let numbers = rand(5, 25);
+            array.push(numbers);
+        }
+
+        console.log(array);
+
+        //         2.	Naudodamiesi 1 uždavinio masyvu:
+        // a.	Suskaičiuokite kiek masyve yra reikšmių didesnių už 10;
+
+        kiekis = 0;
+        for (let i = 0; array.length; i++) {
+            console.log(array[i]);
+            if (array[i] > 10);
+            kiekis++;
+            break;
+        }
+
+        console.log(kiekis)
+
+        // const array1 = array.filter(array[i] => array[i] > 10)
+
+        const array1 = array.filter((reiksme) => reiksme > 10);
+
+        console.log(array1.length);
+
+        //b.	Raskite didžiausią masyvo reikšmę ir jos indeksą arba indeksus jeigu yra keli;        
+
+
+        // Reiksme = masyvas[i]
+        // Indeksas = 1
+        //Masyvo ilgis = masyvas.length
+        let max = 0;
+
+        for (let i = 0; i < array.length; i++) {
+            //console.log(array[i]);
+            if (max < array[i]) {
+                break;
+            }
+        }
+        console.log(max);
+
+        // c.	Suskaičiuokite visų porinių (lyginių) indeksų reikšmių sumą;
+
+        let suma = 0;
+
+        for (let i = 0; i < array.length; i++) {
+            if (i % 2 === 0) {
+                suma = suma + array[i];
+            }
+        }
+
+        console.log(suma);
+
+        // array.forEach((reiksme, indeksas) => i % 2 === 0 ? sum += reiksme : false);
+
+        // array.forEach((reiksme, indeksas) => i % 2 === 0 ? sum += reiksme : false);
+
+        // d.	Sukurkite naują masyvą, kurio reikšmės yra 1 uždavinio masyvo reikšmes minus tos reikšmės indeksas;
+
+        // e.	Papildykite masyvą papildomais 10 elementų su reikšmėmis nuo 5 iki 25, kad bendras masyvas padidėtų iki indekso 39;
+        for (let i = 0; i < 9; i++) {
+            let numbers = rand(5, 25);
+            array.push(numbers);
+        }
+
+        console.log(array);
+
+
+        // g.	Pirminio masyvo elementus su poriniais indeksais padarykite lygius 0 jeigu jie didesni už 15;
+        document.write(`<p>${array}</p>`)
+
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] > 15 && i % 2 === 0)
+                array[i] = 0;
+        }
+        console.log(array)
+
+        document.write(`<p>${array}</p>`)
+
+
+        // array.forEach((reiksme, indeksas) => i % 2 === 0 ? sum += reiksme : false);
+
+        const newArray = array.map((reiksme, indeksas) => (reiksme > 15 && indeksas % 2 === 0) ? 0 : reiksme);
+
+        console.log(newArray);
+
+        document.write(`<p>${newArray}</p>`);
+
+
+        // h.	Suraskite pirmą indeksą, kurio elemento reikšmė didesnė už 10;
+
+        const pirmasIndeksas = array.findIndex((reiksme) => reiksme > 10);
+
+        console.log(pirmasIndeksas); // jei pirmasis elementas didesnis už 10, tai atspausdins 0
+        document.write(`<p>${pirmasIndeksas}</p>`);
+
+        // i.	Iš masyvo ištrinkite visus elementus turinčius porinį indeksą;
+
+        newArray2 = [];
+        for (let i = 0; i < array.length; i++) {
+            if (i % 2 !== 0) {
+                newArray2.push(array[i]);
+            }
+        }
+
+
+        console.log(newArray2);
+
+        document.write(`<p>${newArray2}</p>`);
+
+        const aaa = array.map((value, index) => index % 2 !== 0 ? value : false)
+        console.log(aaa);
+
+
+        // 3.	Sugeneruokite du masyvus, kurių reikšmės yra atsitiktiniai skaičiai nuo 100 iki 999. Masyvų ilgiai 100. Masyvų reikšmės turi būti unikalios savo masyve (t.y. neturi kartotis).
+
+        // Sukuriamas tuščias masyvas
+        let masyvas = [];
+
+        // Generuojami 100 unikalūs skaičiai
+        while (masyvas.length < 100) {
+            let skaicius = Math.floor(Math.random() * 900) + 100;
+
+            // Tikrinama, ar sugeneruotas skaičius dar neegzistuoja masyve
+            if (masyvas.indexOf(skaicius) === -1) {
+                masyvas.push(skaicius);
+            }
+        }
+
+        console.log(masyvas);
+
+
+        // 3 1)
+
+        const pirmasmasyvas3Uzd = [];
+        const antrasmasyvas3uzd = [];
+
+
+        while (pirmasmasyvas3Uzd.length < 100) {
+            let atsitiktiniaiSkaiciai = rand(100, 999)
+            if (!pirmasmasyvas3Uzd.includes(atsitiktiniaiSkaiciai)) { // tikriname ar skaičius jau yra masyve
+                pirmasmasyvas3Uzd.push(atsitiktiniaiSkaiciai);
+            }
+        }
+
+        while (antrasmasyvas3uzd.length < 100) {
+            let atsitiktiniaiSkaiciai = rand(100, 999)
+            if (!antrasmasyvas3uzd.includes(atsitiktiniaiSkaiciai)) { // tikriname ar skaičius jau yra masyve
+                antrasmasyvas3uzd.push(atsitiktiniaiSkaiciai);
+            }
+        }
+
+    </script>
+</body>
+
+</html>

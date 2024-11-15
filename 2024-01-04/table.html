@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .table-frame {
+        width: 900px;
+        height: 900px;
+        background-color: rgba(91, 63, 13, 0.503);
+        position: relative;
+    }
+
+    .table {
+        display: flex;
+        flex-wrap: wrap;
+        width: 860px;
+        height: 860px;
+        background-color: transparent;
+        position: absolute;
+        margin: 20px 20px 20px 20px;
+
+    }
+
+    div {
+        width: 200px;
+        height: 200px;
+        gap: 20px;
+        display: flex; /* Pridėta flexbox */
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 100px;
+        font-family: 'Clear Sans';
+        font-weight: bold;
+    }
+.empty {
+ background-color: rgb(206, 193, 174);
+}
+
+.two {
+ background-color: rgb(237, 222, 210);
+}
+
+.four {
+ background-color: rgb(250, 236, 204);
+}
+
+.eight {
+ background-color: rgb(251, 184, 129);
+ color: white;
+}
+
+.sixtheen {
+ background-color: rgb(250, 149, 102);
+ color: white;
+}
+
+.two p, .four p {
+    color: rgba(86, 73, 51, 0.699);   
+}
+</style>
+</head>
+<body>
+
+    <div class="table-frame">
+        <div class="table">
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="two"><p>2</p></div>
+            <div class="two"><p>2</p></div>
+
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="four"><p>4</p></div>
+            <div class="four"><p>4</p></div>
+
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="four"><p>4</p></div>
+            <div class="eight"><p>8</p></div>
+
+            <div class="two"><p>2</p></div>
+            <div class="four"><p>4</p></div>
+            <div class="eight"><p>8</p></div>
+            <div class="sixtheen"><p>16</p></div>
+        </div>
+    </div>
+</body>
+
+</html>

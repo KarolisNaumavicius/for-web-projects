@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNKCIJOS</title>
+</head>
+
+<body>
+    <script>
+
+        // 1.Parašykite funkciją, kurios argumentas būtų tekstas, kuris yra įterpiamas į h1 elementą ir rezultatas būtų grąžinamas iš jos.
+        // 2.Parašykite funkciją su dviem argumentais, pirmas argumentas tekstas, įterpiamas į h HTML elementą, o antrasis elemento numeris (1-6). Rašydami šią funkciją remkitės pirmąjame uždavinyje parašyta funkcija.
+        // 3.Generuokite atsitiktinį stringą, pasinaudodami kodu btoa(Date.now()). 
+        // Visas didžiąsias raides stringe įdėkite į h1 elementą. Likusių simbolių neimkite. 
+        // Jeigu iš eilės eina kelios didžiosios raidės, jas į elementą reikia dėti kartu (h1 atsidaro prieš pirmosios ir užsidaro po paskutinės). 
+        // Keitimui galite panaudoti patobulintą pirmo uždavinio funkciją ir replaceAll() metodą.
+        // 4.Parašykite funkciją, kuri skaičiuotų, iš kiek sveikų skaičių jos argumentas dalijasi be liekanos (išskyrus vienetą ir patį save). Argumentą patikrinkite ar tai sveikas skaičius, priešingu atveju grąžinkite neigiamą atsakymą.
+        // 5.Sugeneruokite masyvą iš 100 elementų, kurio reikšmės atsitiktiniai skaičiai nuo 33 iki 77. Rūšiuokite masyvą pagal daliklių be liekanos kiekį mažėjimo tvarka, panaudodami ketvirto uždavinio funkciją.
+        // 6.Sugeneruokite masyvą iš 100 elementų, kurio reikšmės atsitiktiniai skaičiai nuo 333 iki 777. Naudodami 4 uždavinio funkciją iš masyvo ištrinkite pirminius skaičius.
+
+        function rand(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.random(Math.floor() * (max - min + 1) + min)
+        }
+
+
+        // 1.Parašykite funkciją, kurios argumentas būtų tekstas, kuris yra įterpiamas į h1 elementą ir rezultatas būtų grąžinamas iš jos.
+
+        document.write(`<h1>First Task</h1>`);
+
+        text = `Labas vakaras`
+
+        function addTextToH1(text) {
+            let result = document.write(`<h1>` + text + `</h1>`);
+            return result
+        }
+
+        let result = addTextToH1(text);
+
+
+        document.write(`<h1>Second Task</h1>`);
+
+        // 2.Parašykite funkciją su dviem argumentais,
+        //  pirmas argumentas tekstas, įterpiamas į h HTML elementą,
+        //   o antrasis elemento numeris (1-6).
+        //    Rašydami šią funkciją remkitės pirmąjame uždavinyje parašyta funkcija.
+
+
+        function addTextAndNumberToH1(text, number) {
+            number = Math.floor(Math.random() * 6) + 1;
+            let result = document.write(`<h${number}>` + text + " " + number + `</h${number}>`)
+            return result
+        }
+
+        result = addTextAndNumberToH1('h elementas skaicius yra:');
+
+        // 3.Generuokite atsitiktinį stringą, pasinaudodami kodu btoa(Date.now()). 
+        // Visas didžiąsias raides stringe įdėkite į h1 elementą. Likusių simbolių neimkite. 
+        // Jeigu iš eilės eina kelios didžiosios raidės, jas į elementą reikia dėti kartu (h1 atsidaro prieš pirmosios ir užsidaro po paskutinės). 
+        // Keitimui galite panaudoti patobulintą pirmo uždavinio funkciją ir replaceAll() metodą.
+
+        document.write(`<h1>Third Task</h1>`);
+
+        let test = btoa(Date.now());
+        document.write(test);
+
+
+        let btoaText = btoa(Date.now());
+
+        function LettersBigToH(text) {
+
+            const noLowerCase = text.replace(/[a-z]/g, '');
+
+            let result = document.write(`<h3>` + noLowerCase + `<h3>`);
+
+            return result
+        }
+
+        LettersBigToH(btoaText);
+
+        // 4.Parašykite funkciją, kuri skaičiuotų, iš kiek sveikų skaičių jos argumentas dalijasi be liekanos
+        // (išskyrus vienetą ir patį save). Argumentą patikrinkite ar tai sveikas skaičius, priešingu atveju grąžinkite neigiamą atsakymą.
+
+        // 49  =  7 division
+
+        document.write(`<h1>Fourth Task</h1>`);
+
+        function division(number) {
+            let storage = 0;
+            for (let i = 2; i < number; i++) {
+
+                if (number % i === 0) {
+                    result = document.write(`<p>Number is evenly divisible by ${i}</p>`);
+                    storage++;
+                }
+
+            }
+            if (storage == 0) {
+                result = document.write(`<p>Number is not evenly divisible</p>`)
+            }
+
+        }
+
+
+        division(5);
+        document.write(`<p>Next number</p>`)
+        division(30);
+
+        document.write(`<h1>Fifth Task</h1>`);
+
+        // 5.Sugeneruokite masyvą iš 100 elementų, 
+        // kurio reikšmės atsitiktiniai skaičiai nuo 33 iki 77.
+        // Rūšiuokite masyvą pagal daliklių be liekanos kiekį mažėjimo tvarka, panaudodami ketvirto uždavinio funkciją.
+
+        let arrayNew = [];
+
+        for (let i = 0; i < 100; i++) {
+            let randomNumber = Math.floor(Math.random() * 45) + 33;
+
+            arrayNew.push(randomNumber);
+        }
+        document.write(arrayNew);
+        document.write(arrayNew.constructor === Array);
+
+        function divisionArray(array) {
+
+            let arrayForDivisors = []; 
+
+            for (let x = 0; x < array.length; x++) {
+                let storage = 0;
+
+                for (let i = 2; i < array[x]; i++) { 
+                    if (array[x] % i === 0) {
+                    storage++;
+
+                    }
+                }   
+                arrayForDivisors.push(storage); 
+            }
+
+            arrayForDivisors.sort((a, b) => b - a);
+
+            return arrayForDivisors; 
+        }
+
+        console.log(divisionArray(arrayNew));
+        document.write('<br>', divisionArray(arrayNew));
+
+        document.write(`<h1>Sixth Task</h1>`);
+
+        // 6.Sugeneruokite masyvą iš 100 elementų, kurio reikšmės atsitiktiniai skaičiai nuo 333 iki 777.
+        //  Naudodami 4 uždavinio funkciją iš masyvo ištrinkite pirminius skaičius.
+
+        let arrayStorage = [];
+
+        for(let i = 333; i < 777; i ++) {
+            arrayStorage.push(i);
+        }
+
+        console.log(arrayStorage);
+
+        function divisionArrayWithoutOnlyPrime(array) {
+            let forStorage = [];
+            for(let i = 0; i < arrayStorage.length; i++){
+                let storage = 0;
+                for(let y = 2; y < arrayStorage[i]; y++){
+                    if(arrayStorage[i] % y === 0) {
+                        storage++;
+                    }
+                }
+                if(storage == 0){
+                    continue;
+                }
+
+                forStorage.push(storage);
+            }
+            forStorage.sort((a, b) => b - a);
+            
+            return forStorage;
+        }
+
+console.log(divisionArrayWithoutOnlyPrime(arrayStorage));
+document.write(divisionArrayWithoutOnlyPrime(arrayStorage));
+
+    </script>
+
+
+</body>
+
+</html>

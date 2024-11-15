@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uzduotyst</title>
+</head>
+<body>
+<script>
+
+function rand(min, max) {
+    return Math.floor(Math.random()*(max-min) + min);
+}
+
+// y=rand(5, 25);
+
+let masyvas = [];
+
+/*
+for(i = 0; i < 30; i++) {
+    y=rand(5, 25);
+    masyvas[i]=y
+}
+*/
+
+for(let i = 0; i < 30; i++) {
+    masyvas[i]=rand(5, 25);
+}
+
+let count = 0;
+
+masyvas.forEach(function(elementas){
+    if(elementas > 10) {
+        count++;
+    }
+})
+console.log(count)
+console.log(masyvas)
+
+let masyvas2 = [];
+
+let i = 0;
+for(let i = 0; i < masyvas.length; i++) {
+    masyvas2[i]=masyvas[i] - i;
+}
+
+masyvas2[0]=masyvas[0] - 0;
+masyvas2[1]=masyvas[1] - 1;
+masyvas2[2]=masyvas[2] - 2;
+
+/*
+for(i = 5; i < 30; i++) {
+    y=rand(5, 25);
+    masyvas.push(y)
+}
+*/
+
+
+
+console.log(masyvas)
+</script>
+    
+</body>
+</html>

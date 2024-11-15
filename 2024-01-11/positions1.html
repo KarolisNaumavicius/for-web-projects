@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positions</title>
+
+</head>
+
+
+<style>
+    .box {
+        width: 250px;
+        height: 250px;
+    }
+
+    .purple {
+        background-color: purple;
+    }
+
+    .orange {
+        background-color: orange;
+    }
+
+    .green {
+        background-color: green;
+    }
+
+    .absolute {
+        position: absolute;
+        /* top: 0 - koordinates */
+        /* top ir left visada tures didesne reiksme, ims virsu */
+        top: 50px;
+        left: 180px;
+        right: 0px;
+        bottom: 0;
+    }
+
+    .top-left {
+        /* top ir left dominuoja */
+        top: 100px;
+        left: 180px;
+    }
+
+    .bottom-right {
+        /* norint nerra6yti top ir left pozicijas */
+        top: unset;
+        bottom: 50px;
+        right: 50px;
+    }
+
+    .hiddern-corner {
+        top: 50px;
+        left: -50px;
+
+    }
+
+    .relative {
+        /* Nurodo absolute elemento ribas */
+        position: relative;
+        top: 100px;
+        left: 50px;
+
+
+    }
+
+    .parent {
+        width: 100;
+        height: 500px;
+
+    }
+
+    .samll-box {
+        width: 50px;
+        height: 50px;
+        top: 0;
+        left: 0;
+
+    }
+
+    .largebox {
+        
+    }
+</style>
+
+<!--body realetyvus-->
+
+<body>
+    <!--position static-->
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <h1 style="margin-top:-58px">Lorem ipsum dolor sit.</h1>
+    <h2>Lorem ipsum dolor sit.</h2>
+    <div class="box purple absolute top-left"></div>
+    <div class="box orange absolute hidden-corner"></div>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora illum, nostrum placeat dicta maiores eligendi
+    illo, eius sint delectus iste cumque! Vel veritatis est maxime atque dolore nihil animi aperiam.500
+    <div class="relative green parent">
+        <div class="box blue absolute bottom-right">
+            <div class="small-box orange absolute top-left"></div>
+        </div>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum autem incidunt eligendi possimus laboriosam,
+        tenetur aliquid, doloremque natus ut accusamus ratione sint quod? Cum quae minus vitae modi repellat voluptas,
+        molestiae cupiditate officiis corrupti ipsam placeat explicabo soluta illo est eaque labore sapiente at nesciunt
+        assumenda sit, veritatis earum rem?
+</body>
+
+</html>

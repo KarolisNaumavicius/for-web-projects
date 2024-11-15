@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rem-em</title>
+
+    <style>
+
+/* standartinis srifto dydis yra 16 px */
+/* 1rem = 16px */
+
+        html {
+            font-size: 20px;
+        }
+
+        /* Standartinis srifto dydis yra 16*/
+.box {
+
+    width: 20rem;
+    height: 20rem;
+    margin: 100px auto;
+
+}
+
+.em-box {
+    width: 20rem;
+    height: 20rem;
+    margin: 0 auto;
+
+}
+
+.orange {
+    background-color: orange;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.parent {
+    font-size: 12px;
+}
+
+
+    </style>
+</head>
+<div class="box orange"></div>
+<div class="parent">
+    <div class="em-box purple"></div>
+</div>
+
+<body>
+    
+</body>
+</html>

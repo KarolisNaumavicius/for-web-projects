@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch</title>
+
+</head>
+<body>
+    <div class="image">
+    <button onclick="randomDogPhoto()">Atnešk nuotrauką</button>
+ 
+</div>
+<div class="imageCat">
+    <button onclick="randomFoxPhoto()">Atnaujinti</button>
+
+</div>
+<script>
+// 1.Sukurkite mygtuką “Atnešk nuotrauką” ant kurio paspaudus vartotojui atvaizduojama atsitiktinė šuns nuotrauka. Nuotraukos adresui gauti naudokite nemokamą API:
+// https://dog.ceo/dog-api/
+
+function randomDogPhoto() {
+     fetch('https://dog.ceo/api/breeds/image/random')
+        .then(response => response.json())
+        .then(response => {
+            document.querySelector('.image').innerHTML = `<img src="${response.message}">`;
+        })
+     };
+
+// 2.Pasinaudodami nemokamu API https://randomfox.ca/ 
+// sukurkite aplikaciją kuri atvaizduotų atsitiktinės lapės nuotrauką. Po ja pavaizduokite mygtuką “Atnaujinti” ant kurio paspaudus būtų gaunama vis nauja nuotrauka.
+
+function randomFoxPhoto() {
+    fetch('https://randomfox.ca/floof/') 
+     .then(response => response.json()) 
+     .then(response => {
+            document.querySelector('.imageCat').innerHTML = `<img src="${response.image}">`;
+        })
+};
+
+
+// 3.Pasinaudodami namokamu API https://http.cat/ 
+// sukurkite puslapį su mygtukais 304, 203, 200. Paspaudus ant kiekvieno iš jų grąžinkite atitinkamą nuotrauką pagal tinklapyje pateiktą pavyzdį.
+
+
+</script>
+
+ <!-- <button id="mygtukas">Atnešk nuotrauką</button> -->
+
+</body>
+</html>
+
+

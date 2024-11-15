@@ -1,0 +1,85 @@
+@import url("bootstrap/dist/css/bootstrap.min.css");
+
+body {
+  display: flex;
+  justify-content: center; /* Nauja eilutė */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px;
+}
+
+table {
+  box-sizing: border-box;
+  max-width: 2000px;
+  max-height: 1000px;
+  overflow: hidden;
+}
+
+
+
+
+
+tr td {
+  display: flex;
+  flex-direction: column; 
+  text-align: left;
+}
+
+
+
+
+tr td img {
+  border-radius: 8px;
+  max-height: 380px;
+  width: 500px;
+  justify-content: center;
+  align-items: center;
+
+ margin-bottom: 12px;
+}
+
+h5 {
+  font-weight: 200;
+  font-size: 15px;
+}
+
+.theme-class {
+  font-weight: bold;
+
+}
+
+.date-class {
+  color: rgba(128, 128, 128, 0.768);
+}
+
+h3 {
+  font-size: 23px;
+}
+
+p {
+  color: rgba(128, 128, 128, 0.768);
+}
+
+h6 {
+  margin-bottom: 2px;
+}
+
+form {
+
+  width: 400px;
+  justify-content: center;
+  align-items: center;
+  place-items: center;
+  justify-items: center;
+  margin-top: 40px;
+}
+
+button {
+  margin-top: 20px;
+  margin-left: 125px;
+  width: 150px;
+  
+}

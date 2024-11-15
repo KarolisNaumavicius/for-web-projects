@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>viewport</title>
+    <style>
+        .full-box {
+            width: 100%;
+            height: 100vh;
+        }
+
+
+
+        .small-box {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .row {
+            width: 100vw;
+            height: 10px;
+            position: absolute;
+            top: 50%;
+            /* calc funkcija skirta aritmetiniams veiksmas tarp skiringu matavimo vienetu*/
+            /* sudetis + */
+            /* atimtis - */
+            /* daugyba * */
+            /* dalyba / */
+            /* nurodant veiksmu prioriteta juos galima apgliaubti skliausteliais */
+            left: calc(-50vw + 50%);
+            transform: translateY(-50);
+        }
+
+        .orange {
+            background-color: orange;
+        }
+
+        .black {
+            background-color: black;
+        }
+
+        .white {
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="full-box orange"></div>
+    <div class="small-box black">
+        <div class="row white"></div>
+    </div>
+</body>
+
+</html>

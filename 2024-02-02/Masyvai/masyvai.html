@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const rand = (min, max) => {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    document.write('<h4>5. Masyvai</h4><br/>');
+    // ------------TASKS------------------
+    // 1.
+    document.write('1. ');
+    const defaultArray = [];
+    for (let i = 0; i < 30; i++) {
+      defaultArray.push(rand(5, 25));
+    }
+    document.write(`${defaultArray}`);
+    document.write('<br/><br/>');
+
+    // 2a.
+    document.write('2.a ');
+    let valueOver10 = 0;
+    for (let i = 0; i < defaultArray.length; i++) {
+      if (defaultArray[i] > 10) {
+        valueOver10++;
+      }
+    }
+    document.write(`${valueOver10}`);
+    document.write('<br/><br/>');
+
+    // 2b.
+    document.write('2.b ');
+    let numbers = defaultArray.slice(0, defaultArray.length);
+    let highestNumber = numbers[0];
+    let indexes = [];
+    for (let i = 1; i < numbers.length; i++) {
+      if (numbers[i] > highestNumber) {
+        highestNumber = numbers[i];
+      }
+    }
+
+    for (let i = 0; i < numbers.length; i++) {
+      if (highestNumber === numbers[i]) {
+        indexes.push(i);
+      }
+    }
+
+    document.write(`Number: ${highestNumber}, indexes: ${indexes}`);
+    document.write('<br/><br/>');
+
+    // 2c.
+    document.write('2.c ');
+    let sum = 0;
+    for (let i = 0; i < defaultArray.length; i++) {
+      if (defaultArray[i] % 2 === 0) {
+        sum += defaultArray[i];
+      }
+    }
+    document.write(`Sum: ${sum}`);
+    document.write('<br/><br/>');
+
+    // 2d.
+    document.write('2.d ');
+    const newArray = [];
+    for (let i = 0; i < defaultArray.length; i++) {
+      newArray.push(defaultArray[i] - i);
+    }
+    document.write(`${newArray}`);
+    document.write('<br/><br/>');
+
+    // 2e.
+    document.write('2.e ');
+    const newLongerArray = defaultArray.slice(0, defaultArray.length);
+    while (newLongerArray.length < 40) {
+      newLongerArray.push(rand(5, 25));
+    }
+    document.write(`${newLongerArray}`);
+    document.write('<br/><br/>');
+
+    // 2f.
+    document.write('2.f ');
+    const primeIndexArray = [];
+    const secondaryIndexArray = [];
+
+    for (let i = 0; i < defaultArray.length; i++) {
+      if (i % 2 === 0) {
+        secondaryIndexArray.push(defaultArray[i]);
+      } else {
+        primeIndexArray.push(defaultArray[i]);
+      }
+    }
+    document.write(`Prime index ${primeIndexArray}`);
+    document.write('<br/>');
+    document.write(`Secondary index ${secondaryIndexArray}`);
+    document.write('<br/><br/>');
+
+    // 2g.
+    document.write('2.g ');
+    const arrayWithZeroes = []
+    for (let i = 0; i < defaultArray.length; i++) {
+      if (i % 2 === 0) {
+        if (defaultArray[i] > 15) {
+          arrayWithZeroes.push(0);
+        }
+      } else {
+        arrayWithZeroes.push(defaultArray[i]);
+      }
+    }
+    document.write(`Array with nullified values: ${arrayWithZeroes}`);
+    document.write('<br/><br/>');
+
+    // 2h.
+    document.write('2.h ');
+    let firstIndex = 0;
+    for (let i = 0; i < defaultArray.length; i++) {
+      if (defaultArray[i] > 10) {
+        firstIndex = defaultArray[i];
+        break;
+      }
+    }
+    document.write(`Index of first value above 10: ${firstIndex}`);
+    document.write('<br/><br/>');
+
+    // 2i.
+    document.write('2.i ');
+    let removedSecondaryElements = [];
+    for (let i = 1; i < defaultArray.length; i += 2) {
+      removedSecondaryElements.push(defaultArray[i]);
+    }
+    document.write(`Remaining array w/o secondary indexes: ${removedSecondaryElements}`);
+    document.write('<br/><br/>');
+
+
+    // 3.
+    document.write('3. ');
+    const array1 = [];
+    const array2 = [];
+    while (array1.length < 100 && array2.length < 100) {
+      const tempNumber = rand(100, 999);
+      const tempNumber2 = rand(100, 999);
+      if (!array1.includes(tempNumber) && array1.length < 100) {
+        array1.push(tempNumber);
+      }
+      if (!array2.includes(tempNumber2) && array2.length < 100) {
+        array2.push(tempNumber2);
+      }
+    }
+    document.write('<br/>');
+    document.write(`Array1: ${array1}`);
+    document.write('<br/>');
+    document.write(`Array2: ${array2}`);
+    document.write('<br/><br/>');
+
+    // 4.
+    document.write('4. ');
+    const newArrayXX = [];
+
+    for (let i = 0; i < array1.length; i++) {
+      if (!array2.includes(array1[i])) {
+        newArrayXX.push(array1[i]);
+      }
+    }
+    document.write(`Non dublicating numbers: ${newArrayXX}`);
+    document.write('<br/><br/>');
+
+    // 5.
+    document.write('5. ');
+    const newArrayXXX = [];
+
+    for (let i = 0; i < array1.length; i++) {
+      if (array2.includes(array1[i])) {
+        newArrayXXX.push(array1[i]);
+      }
+    }
+    document.write(`Dublicating: ${newArrayXX}`);
+    document.write('<br/><br/>');
+
+
+    // 6.
+    document.write('6. ');
+    const tenNumbers = [rand(5, 25), rand(5, 25)];
+    for (i = 2; i < 10; i++) {
+      tenNumbers[tenNumbers.length] = tenNumbers[i - 2] + tenNumbers[i - 1];
+    }
+
+    document.write(`${tenNumbers}`);
+    document.write('<br/><br/>');
+
+    document.write('<br/><br/><a href="/tasks/5Masyvai.pdf">Užduotis</a>');
+
+    // 7.
+    document.write('7. ');
+
+    let arrayABCD = [];
+    let countA = 0;
+    let countB = 0;
+    let countC = 0;
+    let countD = 0;
+
+    for (let i = 0; i < 200; i++) {
+      let randLetter = rand(0, 3);
+      if (randLetter == 0) {
+        arrayABCD.push('A');
+        countA++;
+      }
+      if (randLetter == 1) {
+        arrayABCD.push('B');
+        countB++;
+      }
+      if (randLetter == 2) {
+        arrayABCD.push('C');
+        countC++;
+      }
+      if (randLetter == 3) {
+        arrayABCD.push('D');
+        countD++;
+      }
+
+    }
+    document.write(arrayABCD);
+    document.write(`Overall, letters A: ${countA}, letters B: ${countB}, letters C: ${countC}, letters D: ${countD}`);
+
+    // 8. isrusiuokite 7 uzdavinio masyva pagal abecele
+
+    document.write(`<p>8.</p>`);
+
+    let abcd = '';
+    let addedSymbols = new Set();
+
+    for (let i = 0; i < arrayABCD.length; i++) {
+
+      let symbol = arrayABCD[i];
+
+      if (!addedSymbols.has(symbol) && (symbol === 'A')) {
+        abcd += symbol;
+        addedSymbols.add(symbol)
+      }
+    }
+
+    for (let i = 0; i < arrayABCD.length; i++) {
+
+      let symbol = arrayABCD[i];
+
+      if (!addedSymbols.has(symbol) && (symbol === 'B')) {
+        abcd += symbol;
+        addedSymbols.add(symbol)
+      }
+    }
+
+    for (let i = 0; i < arrayABCD.length; i++) {
+
+      let symbol = arrayABCD[i];
+
+      if (!addedSymbols.has(symbol) && (symbol === 'C')) {
+        abcd += symbol;
+        addedSymbols.add(symbol)
+      }
+    }
+
+    for (let i = 0; i < arrayABCD.length; i++) {
+
+      let symbol = arrayABCD[i];
+
+      if (!addedSymbols.has(symbol) && (symbol === 'D')) {
+        abcd += symbol;
+        addedSymbols.add(symbol)
+      }
+    }
+
+    document.write(abcd);
+
+    // 9 
+    document.write(`<p>9.</p>`);
+
+    let arrayABCDFirst = [];
+    let arrayABCDSecond = [];
+    let arrayABCDThird = [];
+    let arrayConnected = [];
+
+    for (let i = 0; i < 200; i++) {
+      let randLetter = rand(0, 3);
+      if (randLetter == 0) {
+        arrayABCDFirst.push('A');
+      }
+      if (randLetter == 1) {
+        arrayABCDFirst.push('B');
+      }
+      if (randLetter == 2) {
+        arrayABCDFirst.push('C');
+      }
+      if (randLetter == 3) {
+        arrayABCDFirst.push('D');
+
+      }
+    }
+
+    for (let i = 0; i < 200; i++) {
+      let randLetter = rand(0, 3);
+      if (randLetter == 0) {
+        arrayABCDSecond.push('A');
+      }
+      if (randLetter == 1) {
+        arrayABCDSecond.push('B');
+      }
+      if (randLetter == 2) {
+        arrayABCDSecond.push('C');
+      }
+      if (randLetter == 3) {
+        arrayABCDSecond.push('D');
+
+      }
+    }
+
+    for (let i = 0; i < 200; i++) {
+      let randLetter = rand(0, 3);
+      if (randLetter == 0) {
+        arrayABCDThird.push('A');
+      }
+      if (randLetter == 1) {
+        arrayABCDThird.push('B');
+      }
+      if (randLetter == 2) {
+        arrayABCDThird.push('C');
+      }
+      if (randLetter == 3) {
+        arrayABCDThird.push('D');
+
+      }
+    }
+
+
+
+    let countUniqueValue = 0;
+    let countUniqueValues = '';
+
+    for (let i = 0; i < arrayABCDFirst.length; i++) {
+      arrayConnected.push(`${arrayABCDFirst[i]}${arrayABCDSecond[i]}${arrayABCDThird[i]}`);
+    }
+
+    document.write(arrayConnected);
+
+    for (let i = 0; i < arrayConnected.length; i++) {
+
+      let uniqueElement = true;
+
+      for (let y = 0; y < arrayConnected.length; y++) {
+        if (i != y && arrayConnected[i] === arrayConnected[y]) {
+          uniqueElement = false;
+          break;
+        }
+      }
+      if (uniqueElement) {
+        countUniqueValue++;
+        countUniqueValues += arrayConnected[i] + ' ';
+      }
+    }
+
+    document.write(`Unique values number is ${countUniqueValue}</p>`);
+    document.write(`Unique values are: ${countUniqueValues}</p>`);
+
+    let countUniqueCombination = 0;
+    let countUniqueCombinations = '';
+
+    for (let i = 0; i < arrayConnected.length; i++) {
+
+      let uniqueCombination = true;
+
+      for (let y = 0; y < arrayConnected.length; y++) {
+        if (i != y && arrayConnected[i] === arrayConnected[y] && arrayConnected[i + 1] === arrayConnected[y + 1]) {
+          uniqueCombination = false;
+          break;
+        }
+      }
+      if (uniqueCombination) {
+        countUniqueCombination++;
+        countUniqueCombinations += arrayConnected[i] + ' ';
+      }
+    }
+
+    document.write(`Unique combinations number is ${countUniqueCombination}</p>`);
+    document.write(`Unique combinations are: ${countUniqueCombinations}</p>`);
+
+    countUniqueCombinations = new Set();
+
+    for (let i = 0; i < arrayConnected; i++) {
+      let combination = `${arrayConnected[i]}${arrayConnected[i + 1]}`;
+      countUniqueCombinations.add(combination);
+    }
+
+    for (let i = 0; i < arrayConnected.length - 1; i++) {
+      let combination = `${arrayConnected[i]}${arrayConnected[i + 1]}`;
+      countUniqueCombinations.add(combination);
+    }
+
+    document.write(`Unique combinations number is ${countUniqueCombinations.size}</p>`);
+    document.write(`Unique combinations are: ${Array.from(countUniqueCombinations).join(' ')}</p>`);
+
+
+    // 10 
+
+    let resultSum = 0;
+    while (true) {
+      let uniqueNumbers = new Set();
+
+      while (uniqueNumbers.size < 101) {
+        let manynumbers = rand(0, 300);
+
+        uniqueNumbers.add(manynumbers)
+      }
+
+      let arrayOneNullOne = Array.from(uniqueNumbers);
+
+      document.write(`</p> Array elements(${arrayOneNullOne.length}): ${arrayOneNullOne.join(' ')}</p>`);
+
+      let maxValue = Math.max(...arrayOneNullOne);
+
+      let middleIndex = Math.floor(arrayOneNullOne.length / 2);
+
+      while (arrayOneNullOne.indexOf(maxValue) !== -1) {
+        arrayOneNullOne.splice(arrayOneNullOne.indexOf(maxValue), 1);
+      }
+
+      arrayOneNullOne.splice(middleIndex, 0, maxValue);
+
+      let leftSide = arrayOneNullOne.slice(0, middleIndex);
+      let rightSide = arrayOneNullOne.slice(middleIndex + 1);
+
+      leftSide.sort((a, b) => a - b);
+
+      rightSide.sort((a, b) => b - a);
+
+      let result = [...leftSide, maxValue, ...rightSide];
+
+      document.write(`<p>${result.join(' ')}</p>`);
+
+
+      let leftSideSum = 0;
+      let rightSideSum = 0;
+
+
+      for (let i = 0; i < Math.floor(result.length / 2); i++) {
+        leftSideSum += result[i];
+      }
+
+
+      for (let i = Math.floor(result.length / 2); i < result.length; i++) {
+        rightSideSum += result[i];
+      }
+
+
+      resultSum = Math.abs(leftSideSum - rightSideSum);
+
+      document.write(`<p>Left side Sum: ${leftSideSum}</p>`);
+      document.write(`<p>Right side Sum: ${rightSideSum}</p>`);
+      document.write(`<p> Substraction module is less than 30: ${resultSum}</p>`);
+      console.log(resultSum)
+
+      if (resultSum <= 30) {
+        break;
+      }
+    }
+  </script>
+</body>
+
+</html>
